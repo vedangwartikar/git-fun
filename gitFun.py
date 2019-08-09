@@ -7,6 +7,6 @@ file = open("bait.py", "a")
 file.write('i')
 subprocess.call("git init", shell = True)
 subprocess.call("git add .", shell = True)
-j = 1
+j = 2
 subprocess.call(''.join(['git commit --date="', str(365 + j), ' day ago" -m "updated"]']), shell = True)
 subprocess.call("git push origin master", shell = True)
