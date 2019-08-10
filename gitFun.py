@@ -8,5 +8,5 @@ file.write('i')
 subprocess.call("git init", shell = True)
 subprocess.call("git add .", shell = True)
 j = 1
-subprocess.call('git commit --date="365' + str(j) + 'day ago" -m "updated"', shell = True)
+subprocess.call(''.join(['git commit --date="', str(365 + j), ' day ago" -m "updated"]']), shell = True)
 subprocess.call("git push origin master", shell = True)
