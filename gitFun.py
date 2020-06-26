@@ -1,12 +1,12 @@
 import subprocess
 import random
 
-for i in range(10):
+for i in range(1):
     for j in range(5, random.randint(5,9)):
-        print('contributions: ', j, 'days ago: ', 55+i)
+        print('contributions: ', j, 'days ago: ', 48+i)
         file = open("bait.py", "a")
         file.write('i')
         subprocess.call("git init", shell = True)
         subprocess.call("git add .", shell = True)
-        subprocess.call(''.join(['git commit --date="', str(55 + i), ' day ago" -m "updated"]']), shell = True)
+        subprocess.call(''.join(['git commit --date="', str(48 + i), ' day ago" -m "updated"]']), shell = True)
         subprocess.call("git push origin master", shell = True)
